@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 
 class MenuSection extends StatelessWidget {
 
@@ -10,7 +11,7 @@ class MenuSection extends StatelessWidget {
   Widget listElement({IconData icon, String label, Function action}) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 10.0,
+        vertical: 12.0,
         horizontal: 20.0,
       ),
       child: Row(
@@ -57,17 +58,17 @@ class MenuSection extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     this.listElement(
-                      icon: Icons.dashboard,
+                      icon: FeatherIcons.home,
                       label: 'Dashboard',
                       action: null,
                     ),
                     this.listElement(
-                      icon: Icons.add_circle_outline,
+                      icon: FeatherIcons.plus,
                       label: 'New',
                       action: null,
                     ),
                     this.listElement(
-                      icon: Icons.history,
+                      icon: FeatherIcons.list,
                       label: 'Billing History',
                       action: null,
                     ),
@@ -76,12 +77,12 @@ class MenuSection extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     this.listElement(
-                      icon: Icons.exit_to_app,
+                      icon: FeatherIcons.logOut,
                       label: 'Logout',
                       action: null,
                     ),
                     this.listElement(
-                      icon: Icons.help_outline,
+                      icon: FeatherIcons.helpCircle,
                       label: 'Help',
                       action: null,
                     ),

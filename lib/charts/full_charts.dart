@@ -1,3 +1,4 @@
+import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
@@ -41,8 +42,8 @@ class FullCharts extends StatelessWidget {
                   ),
                 ),
                 Icon(
-                  Icons.settings,
-                  color: Colors.grey[500],
+                  FeatherIcons.settings,
+                  color: Colors.black87,
                   size: 20.0,
                 ),
               ],
