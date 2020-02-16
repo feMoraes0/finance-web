@@ -58,8 +58,7 @@ class DashboardPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
           child: SizedBox(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,106 +70,107 @@ class DashboardPage extends StatelessWidget {
                     page: 'Dashboard',
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.only(
-                    left: 20.0,
-                  ),
-                  width: largeSection,
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: <Widget>[
-                          this.headerDashboard(),
-                          this.headerDashboard(),
-                          this.headerDashboard(),
-                          Container(
-                            padding: const EdgeInsets.only(
-                              right: 30.0,
-                              top: 30.0,
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20.0),
-                              ),
-                              color: Colors.grey[100],
-                            ),
-                            child: Column(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 10.0),
-                                  child: Row(
-                                    children: <Widget>[
-                                      Text(
-                                        'Fernando de Moraes',
-                                        style: TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 10.0),
-                                        child: Icon(
-                                          Icons.exit_to_app,
-                                          color: Colors.black54,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                this.headerDashboard(),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8.0),
-                        margin: const EdgeInsets.only(bottom: 15.0),
-                        child: Row(
+                SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                      left: 20.0,
+                    ),
+                    width: largeSection,
+                    color: Colors.white,
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: <Widget>[
-                            Text(
-                              'Current Period',
-                              style: TextStyle(
-                                fontSize: 25.0,
-                                color: Color.fromRGBO(62, 77, 162, 1.0),
-                                fontWeight: FontWeight.w600,
+                            this.headerDashboard(),
+                            this.headerDashboard(),
+                            this.headerDashboard(),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                right: 30.0,
+                                top: 30.0,
                               ),
-                            ),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(20.0),
+                                ),
+                                color: Colors.grey[100],
+                              ),
+                              child: Column(
+                                children: <Widget>[
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 10.0),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Text(
+                                          'Fernando de Moraes',
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            color: Colors.black54,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10.0),
+                                          child: Icon(
+                                            Icons.exit_to_app,
+                                            color: Colors.black54,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  this.headerDashboard(),
+                                ],
+                              ),
+                            )
                           ],
                         ),
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Container(
-                            padding: const EdgeInsets.all(15.0),
-                            width: largeSection * 0.25,
-                            child: TotalCharts(),
+                        Container(
+                          padding: const EdgeInsets.all(8.0),
+                          margin: const EdgeInsets.only(bottom: 15.0),
+                          child: Row(
+                            children: <Widget>[
+                              Text(
+                                'Current Period',
+                                style: TextStyle(
+                                  fontSize: 25.0,
+                                  color: Color.fromRGBO(62, 77, 162, 1.0),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
-                          Container(
-                            padding: const EdgeInsets.all(15.0),
-                            width: largeSection * 0.25,
-                            child: ParcialCharts(),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(15.0),
-                            width: (largeSection * 0.50) - 20.0,
-                            child: FullCharts(),
-                          ),
-                        ],
-                      )
-                    ],
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              padding: const EdgeInsets.all(15.0),
+                              width: largeSection * 0.25,
+                              child: TotalCharts(),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(15.0),
+                              width: largeSection * 0.25,
+                              child: ParcialCharts(),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(15.0),
+                              width: (largeSection * 0.50) - 20.0,
+                              child: FullCharts(),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
           ),
         ),
-      ),
     );
   }
 }
