@@ -42,6 +42,13 @@ class MenuSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
+            padding: const EdgeInsets.all(15.0),
+            height: 80.0,
+            child: Image(
+              image: AssetImage('assets/logo.png'),
+            ),
+          ),
+          Container(
             padding: const EdgeInsets.symmetric(vertical: 20.0),
             height: screen.height - 80,
             child: Column(
@@ -69,8 +76,8 @@ class MenuSection extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     this.listElement(
-                      icon: Icons.settings,
-                      label: 'Settings',
+                      icon: Icons.exit_to_app,
+                      label: 'Logout',
                       action: null,
                     ),
                     this.listElement(

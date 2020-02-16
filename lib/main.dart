@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Finance Web',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Nunito',
       ),
       home: DashboardPage(),
     );
