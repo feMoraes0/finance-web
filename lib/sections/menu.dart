@@ -9,27 +9,30 @@ class MenuSection extends StatelessWidget {
 
 
   Widget listElement({IconData icon, String label, Function action}) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 12.0,
-        horizontal: 20.0,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Icon(icon, color: (this.page == label) ? Color.fromRGBO(62, 77, 162, 1.0) : Colors.black,),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0),
-            child: Text(
-              label,
-              style: TextStyle(
-                fontSize: 18.0,
-                color: (this.page == label) ? Color.fromRGBO(62, 77, 162, 1.0) : Colors.black,
-                fontWeight: FontWeight.w300,
+    return GestureDetector(
+      onTap: action,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 12.0,
+          horizontal: 20.0,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Icon(icon, color: (this.page == label) ? Color.fromRGBO(62, 77, 162, 1.0) : Colors.black,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Text(
+                label,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: (this.page == label) ? Color.fromRGBO(62, 77, 162, 1.0) : Colors.black,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -60,12 +63,16 @@ class MenuSection extends StatelessWidget {
                     this.listElement(
                       icon: FeatherIcons.home,
                       label: 'Dashboard',
-                      action: null,
+                      action: () {
+                        Navigator.of(context).pushNamed('/dashboard');
+                      },
                     ),
                     this.listElement(
                       icon: FeatherIcons.plus,
                       label: 'New',
-                      action: null,
+                      action: () {
+                        Navigator.of(context).pushNamed('/new');
+                      },
                     ),
                     this.listElement(
                       icon: FeatherIcons.list,

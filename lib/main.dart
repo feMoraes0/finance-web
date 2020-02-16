@@ -1,4 +1,5 @@
 import 'package:finance_web/pages/dashboard.dart';
+import 'package:finance_web/pages/new.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -13,6 +14,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Nunito',
       ),
+      routes: {
+        '/dashboard': (context) => DashboardPage(),
+        '/new': (context) => NewPage(),
+      },
       home: DashboardPage(),
     );
   }
