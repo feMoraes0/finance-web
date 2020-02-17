@@ -39,9 +39,6 @@ class _NewPageState extends State<NewPage> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(
-                top: 0.0,
-              ),
               child: Text(
                 'Title',
                 style: TextStyle(
@@ -52,7 +49,7 @@ class _NewPageState extends State<NewPage> {
             Container(
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: 'Title',
+                  hintText: 'Title',
                   prefixIcon: Icon(FeatherIcons.edit3),
                   border: UnderlineInputBorder(),
                 ),
