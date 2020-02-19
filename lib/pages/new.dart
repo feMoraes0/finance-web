@@ -1,4 +1,5 @@
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
+import 'package:finance_web/sections/header_section.dart';
 import 'package:finance_web/sections/scaffold_section.dart';
 import 'package:flutter/material.dart';
 
@@ -18,16 +19,18 @@ class _NewPageState extends State<NewPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size screen = MediaQuery.of(context).size;
     return ScaffoldSection(
       page: 'New',
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 20.0,
-          horizontal: 15.0,
+        padding: const EdgeInsets.only(
+          bottom: 20.0,
+          left: 15.0,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            HeaderSection(),
             Container(
               margin: const EdgeInsets.only(bottom: 20.0),
               child: Text(
@@ -87,7 +90,7 @@ class _NewPageState extends State<NewPage> {
               ),
             ),
             Container(
-              height: 200.0,
+              height: 120.0,
               child: GridView.count(
                 crossAxisCount: 4,
                 childAspectRatio: 5,
@@ -103,14 +106,26 @@ class _NewPageState extends State<NewPage> {
                           value: this.categories[index],
                           groupValue: this.categories,
                           activeColor: Colors.red,
-                          onChanged: (i) {
-                            
-                          },
+                          onChanged: (i) {},
                         ),
                       ),
                     );
                   },
                 ),
+              ),
+            ),
+            SizedBox(
+              width: screen.width - 20.0,
+              child: FlatButton(
+                onPressed: () {},
+                child: Text(
+                  'Save',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                  ),
+                ),
+                color: Color.fromRGBO(62, 77, 162, 1.0),
               ),
             )
           ],
