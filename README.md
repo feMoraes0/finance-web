@@ -1,16 +1,33 @@
-# finance_web
+<h1 align="center">Finance Web</h1>
 
-A new Flutter project.
+Financial dashboard made to experiment the beta version of Flutter Web.
 
-## Getting Started
+## Prints
+<p align="center">
+  <img width="600" src="https://i.pinimg.com/originals/21/8b/fe/218bfe5fc41b1e9c8d2972eb1bfb2cd0.png"/>
+</p>
+<p align="center">
+  <img width="600" src="https://i.pinimg.com/originals/84/33/4c/84334c163508bb7d5c9382a3ee582d76.png"/>
+</p>
 
-This project is a starting point for a Flutter application.
+## How to use
 
-A few resources to get you started if this is your first Flutter project:
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Flutter (Beta channel)](https://flutter.dev/docs/get-started/install) installed on your computer. From your command line:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
+# Clone this repository
+$ git clone https://github.com/feMoraes0/finance-web.git
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Go into the repository
+$ cd finance-web
+
+# Install dependencies
+$ flutter packages get
+
+# Run the app
+$ flutter run
+```
+
+## Contact
+  - <a target="_blank" href="https://www.linkedin.com/in/fernando-moraes-48a26916a/">LinkedIn</a>
+  - <a target="_blank" href="mailto:fernandomoraes.lopes@gmail.com">E-mail</a>
